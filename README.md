@@ -1,2 +1,7 @@
-# HenderForge
-AI-assisted tool for generating living SDLC validation documents in pharmaceutical CSV – portfolio demo project
+## HenderForge
+
+Demonstration application using rule-based logic (and future ML) to generate compliant, living SDLC validation documents for computerized systems in pharma.
+
+Built by Dr. Andrew Henderson – CSV specialist transitioning to ML engineering.
+
+Early development – MVP coming soon.
