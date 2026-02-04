@@ -6,9 +6,10 @@ Prepared by: Grok
 Reviewed by: Dr. Andrew Henderson, Silver Cavalry Engineering Ltd. 
 Approved by: Dr. Andrew Henderson, Silver Cavalry Engineering Ltd.
 
-Change History
-Version	  Date	    Changes Made	  Rationale
-1.0	    2026-02-02	Initial draft	  Creation of FS based on URS-HF-001 v1.0 to detail design implementation
+| Version | Date       | Changes Made  | Rationale                                                                |
+|---------|------------|---------------|--------------------------------------------------------------------------|
+| 1.0     | 2026-02-02 | Initial draft | Creation of FS based on URS-HF-001 v1.0 to detail design implementation  |
+
 
 1.	Purpose and Scope 
 This Functional Specification (FS) details how the user requirements defined in URS-HF-001 v1.0 will be met through technical design and implementation. It describes the system's architecture, components, data flows, and logic to achieve the required functionality for HenderForge, a browser-based demo app for generating living SDLC validation documents.
