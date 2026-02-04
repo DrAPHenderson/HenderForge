@@ -1,0 +1,5 @@
+﻿Timestamp (GMT),User ID / Full Name,Action Type,Record / Document ID,Field / Section Changed,Old Value,New Value,Reason for Change
+27/01/2026 13:45,AHenderson (Andrew Henderson),Generate Draft,URS-2026-001,Full URS content,(No prior version),"Generated full URS draft from system description: ""Cloud-based LIMS for stability testing...""",AI-assisted draft creation - initial generation
+27/01/2026 13:52,AHenderson (Andrew Henderson),Modify,URS-2026-001,Section 3.2 Performance Requirements,"Uptime > 99.5%""",> 99.9%,Correction to align with site SLA requirement
+27/01/2026 14:05,"JSmith (Jane Smith, QA)",Approve,URS-2026-001,Entire document,Draft,Approved,Reviewed and approved as compliant with GxP requirements
+27/01/2026 14:10,AHenderson (Andrew Henderson),Generate Draft,FRS-2026-001,Full FRS content,(No prior version),Generated FRS from approved URS-2026-001,Traceable generation from approved URS

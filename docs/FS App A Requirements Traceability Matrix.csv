@@ -1,0 +1,40 @@
+﻿REQ-ID,Description (Summary),Priority,Verification Method,Design Ref,Notes / Acceptance Criteria
+REQ-1.1,Demonstrate reduction of CSV lead times by 70-80% for GAMP 5 Cat 4-5 systems,High,Demo timing measurement & comparison,"FS-4.3.3, FS-5.1",Generate full suite in <10 minutes vs. typical manual 3-6 months (caveated in disclaimer)
+REQ-1.2,"Incorporate advantages over generic LLMs (determinism, ALCOA+ trails, propagation)",High,Side-by-side comparison & audit trail review,"FS-5.4, FS-4.2.2, FS-4.4.2",Outputs reproducible on identical inputs; trail logs changes with reason/old-new values
+REQ-3.1,Support Administrator role for uploading SOPs/WIs (read-only for users),High,Manual test: upload & verify read-only access,FS-3.1,Admin can add/delete; users see but cannot modify
+REQ-3.2,"Support User role for document generation, querying, uploading approved PDFs",High,End-to-end workflow test,FS-3.2,User can complete questionnaire -> generate -> upload -> see propagation
+REQ-3.3,Simplified authentication (name entry + session UUID),Medium,Load app and verify name captured in trail,FS-3.3,Name appears in audit trail entries; UUID persists on refresh (localStorage)
+REQ-4.1.1,"Main UI with Valhender mascot, Query field, Response field, Project Setup sidebar",High,Visual inspection & navigation test,FS-4.1.1,Layout matches Fig 1; sidebar highlights on click
+REQ-4.1.2,Valhender text-only communication with animation (glowing nodes like Mr. Clippy),Medium,Interaction test,FS-4.1.2,Animates on response; no audio; responses â‰¤1000 chars or paginated
+REQ-4.1.3,Loading popup for user name; interface greyed until entered,Medium,App launch test,FS-4.1.3,Popup disappears after name entry; name used in trail & docs
+REQ-4.1.4,"Initial Valhender response with selectable options (Introduction, About, Disclaimer, Generate)",High,Click each option & verify response,FS-4.1.4,Options in bubble style; hover lights; Go Back restores initial screen
+REQ-4.2.1,Project Setup sidebar with navigable titles; highlight & display in Workflow tab,High,Navigation test,FS-4.2.1,Clicking title updates Workflow/Validation tab
+REQ-4.2.2,"Workflow tabs: Validation, History (chat log), Session Audit Trail (ALCOA+ table)",High,Generate actions & review trail,FS-4.2.2,"Table includes Timestamp, User ID, Action, Record ID, Field, Old/New, Reason; CSV export"
+REQ-4.2.3,Admin upload of SOP/WI PDFs; docs generated consistent with them,Medium,Upload PDF -> generate doc -> inspect content,FS-4.2.3,Generated text references or aligns with uploaded SOP/WI content
+REQ-4.3.1,"Multi-screen questionnaire with progress bar, Next/Back/Save, save/resume via UUID",High,Complete partial session -> resume,FS-4.3.1,Progress bar updates; resume loads previous answers; Save persists in browser
+REQ-4.3.2,"Questions cover project context, system details, GxP functions, GAMP category, etc.",High,Review questionnaire flow,FS-4.3.2,All required fields marked *; tooltips on technical terms; decision tree for GAMP/specs
+REQ-4.3.3,Generate living docs sequentially on OK; show status (amber dots/ticks/arrows),High,Generate suite -> verify all docs appear,FS-4.3.3,Docs: Risk Assess -> VP -> URS -> FRS(+specs) -> CS -> SOP -> SAT -> IOQ -> RTM -> VSR
+REQ-4.3.4,"Draft folders show Word file, download, read-only preview",High,Generate -> select Draft folder,FS-4.3.4,Preview displays content; download produces .docx or markdown equivalent
+REQ-4.3.5,FRS supports variable sub-docs (FRS/DDS/SDS/CS) based on decision tree,Medium,Test different GAMP/system types,FS-4.3.5,"Correct sub-docs generated (e.g., simple PLC -> FRS+CS only)"
+REQ-4.4.1,"Upload electronic PDFs (Kneat-style, clean text) to Approved/Post-Approved folders",High,Upload clean PDF -> verify extraction/preview,FS-4.4.1,Text extracted & displayed; no OCR/handwriting support required
+REQ-4.4.2,"On upload confirmation, propagate changes to downstream drafts automatically",High,Upload approved URS -> check updated RTM/FRS,FS-4.4.2,Downstream docs regen with amber -> tick; consistency maintained
+REQ-4.4.3,SAT/IOQ Post-Approved prompt for discrepancy inclusions,Medium,Upload Post-Approved PDF -> verify prompt,FS-4.4.3,Valhender message appears reminding user to include discrepancies
+REQ-4.5.1,Valhender defends content with reg/SOP references & Voss techniques,High,Query generated doc -> review response,FS-4.5.1,"References e.g. Annex 11 §9; uses labelling, empathy, reassurance"
+REQ-4.5.2,Handle off-topic queries with refusal + cheesy joke,Medium,Ask unrelated question,FS-4.5.2,Response refuses politely with humor; stays on validation topic
+REQ-4.5.3,"Emphasize advantages over generic LLMs (determinism, privacy, no hallucinations)",High,Ask about ChatGPT comparison,FS-4.5.3,"Valhender explains traceability, audit trail, local data benefits"
+REQ-4.6.1,"Display popup exceptions (memory full, errors, too many users)",Medium,Simulate error conditions (if possible),FS-4.6.1,Appropriate Valhender message appears in popup
+REQ-4.6.2,"Admin dashboard for metrics (visits, memory, errors, ratings) -> creator only",Low,Access as admin -> verify visibility,FS-4.6.2,Only visible to specified user; shows basic stats
+REQ-5.1,Performance: full suite generation in minutes; responses fast,High,Time generation process,FS-5.1,Target <5-10 min for complete suite
+REQ-5.2,"Availability: Browser-based, no server for zero budget",Medium,Deploy & access as static file,FS-2 (Architecture),Runs entirely client-side; hostable on GitHub Pages
+REQ-5.3,"Security/Privacy: local storage, no external data sharing",High,Inspect network traffic & storage,FS-5.3,No API calls to external services; data stays in browser
+REQ-5.4,Determinism: identical inputs yield identical outputs,High,Run same inputs twice,FS-5.4,Outputs match (via fixed seeds/rules where applicable)
+REQ-5.5,"Usability: Animated Valhender, intuitive navigation",Medium,User walkthrough & feedback simulation,"FS-4.1.1, FS-4.1.2","Responsive layout, clear icons, logical flow"
+REQ-5.6,Scalability: Handle up to 50 systems,Low,Test with max input,FS-5.6,Array limits and loop safeguards prevent performance degradation
+REQ-6.1,"Docs compliant in style with 21 CFR Parts 11/210/211, EudraLex Vol 4 Annex 11/15/22, GAMP 5",High,Manual review of generated content,FS-6.1,"Headers, sections, traceability follow good practice (demo only)"
+REQ-6.2,Audit trail ALCOA+ compliant (simplified for demo),High,Review trail after actions,"FS-4.2.2, FS-6.2",Entries created contemporaneously for key events
+REQ-6.3,"Clear disclaimer: demo only, not for real GxP use",High,Verify displayed on load,FS-6.3,Prominent in initial response & footer
+REQ-6.4,Support electronic uploads/extractions (clean PDFs),Medium,Upload & extract test,"FS-4.4.1, FS-6.4",Reliable text extraction from digital PDFs (no OCR required)
+,,,,,
+,,,,,
+,,,,,
+,,,,,
