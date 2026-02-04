@@ -7,8 +7,9 @@ Reviewed by: Grok
 Approved by: Dr. Andrew Henderson, Silver Cavalry Engineering Ltd.
 
 Change History
-Version	Date	Changes Made	Rationale
-1.0	2026-02-02	Initial draft	Creation of URS for HenderForge demo app
+| Version | Date       | Changes Made  | Rationale                                 |
+|---------|------------|---------------|-------------------------------------------|
+| 1.0     | 2026-02-02 | Initial draft | Creation of URS for HenderForge demo app  |
 
 1. Purpose and Scope
 The purpose of this User Requirements Specification (URS) is to define the user needs for HenderForge, a demonstration application that leverages machine learning (ML) to generate a complete suite of living Software Development Lifecycle (SDLC) validation documents for computerized systems in the pharmaceutical industry. This app is intended as a portfolio showcase to demonstrate capabilities in transitioning from Computer Systems Validation (CSV) to ML engineering, by automating compliant document generation under GAMP 5 principles.
