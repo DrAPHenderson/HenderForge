@@ -16,7 +16,7 @@ HenderForge automates parts of the Computer Systems Validation (CSV) process by 
 
 - [User Requirements Specification (URS-HF-001)](docs/URS-HF-001.md)  
 - [Functional Specification (FS-HF-001)](docs/FS-HF-001.md)  
-- [High-Level Architecture Diagram](assets/architecture-diagram.png) (or exact filename you used)
+- [High-Level Architecture Diagram](assets/Architecture diagram-v1.png)
 
 ## Coming Soon
 - Streamlit prototype with questionnaire and document generation
